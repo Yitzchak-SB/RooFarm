@@ -1,0 +1,39 @@
+#response-wrapper{
+    text-align: center;
+    margin-top: 100px;
+}
+
+#response-h1{
+    font-size: 50px;
+}
+
+#response-link{
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+#response-textfield{
+    width: 250px;
+}
+
+#response-btn{
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+#response-form-btn{
+    height: 55px;
+    margin-left: 10px;
+}
+
+#response-question{
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#dropdown{
+    margin-top: 30px;
+}
