@@ -6,6 +6,9 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import AddressInput from "./components/AddressInput";
 import { Fab } from "@material-ui/core";
 import FilterVintageTwoToneIcon from "@material-ui/icons/FilterVintageTwoTone";
+import Scroll from "react-scroll";
+
+const ScrollLink = Scroll.ScrollLink;
 
 const App = () => {
   const handleClick = (event) => {

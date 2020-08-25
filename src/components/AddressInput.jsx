@@ -4,7 +4,6 @@ import Paper from "@material-ui/core/Paper";
 import InputBase from "@material-ui/core/InputBase";
 import IconButton from "@material-ui/core/IconButton";
 import { geocodeGenerator } from "../lib/geocode";
-
 import FilterVintageTwoToneIcon from "@material-ui/icons/FilterVintageTwoTone";
 
 const useStyles = makeStyles((theme) => ({
