@@ -1,0 +1,19 @@
+#ul-rooffarm{
+    list-style-type: none;
+}
+
+#rf-text{
+    padding-right: 35px;
+
+}
+
+#rf-image{
+    background-image: url("../images/rooffarm.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#rf-title{
+    margin-left: 35px;
+    color: rgb(65, 148, 93);
+}
+

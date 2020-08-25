@@ -1,0 +1,26 @@
+#benefits-wrapper{
+    background-color: rgb(238, 238, 234);
+    margin-top: -19px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+#benefits-title{
+    text-align: center;
+    padding-top: 70px;
+}
+
+@media only screen and (max-width: 600px) {
+    #first-icon{
+        margin-left: 110px;
+    }
+    #second-icon{
+        margin-left: 110px;
+    }
+    #third-icon{
+        margin-left: 110px;
+    }
+    #fourth-icon{
+        margin-left: 110px;
+    }
+}
