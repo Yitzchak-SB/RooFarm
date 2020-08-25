@@ -10,12 +10,9 @@ export const geocodeGenerator = (address) => {
       console.log(lat, lng);
       console.log();
       const postObj = {};
-      postObj.lat = toString(response.results[0].geometry.location.lat);
-      postObj.long = toString(response.results[0].geometry.location.lng);
-      axios.post(
-        "https://immense-lowlands-41652.herokuapp.com/",
-        response.results[0].geometry.location
-      );
+      postObj.latitude = toString(response.results[0].geometry.location.lat);
+      postObj.longitude = toString(response.results[0].geometry.location.lng);
+      axios.post("https://immense-lowlands-41652.herokuapp.com/", postObj);
     },
     (error) => {
       console.error(error);
