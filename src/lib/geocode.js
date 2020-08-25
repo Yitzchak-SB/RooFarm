@@ -4,7 +4,9 @@ import axios from "axios";
 export const geocodeGenerator = (address) => {
   Geocode.setApiKey(process.env.REACT_APP_API_KEY);
 
-  Geocode.fromAddress(address).then(
+  const structuredObj = address.label;
+
+  Geocode.fromAddress(structuredObj).then(
     (response) => {
       const { lat, lng } = response.results[0].geometry.location;
       console.log(lat, lng);
