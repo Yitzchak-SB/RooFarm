@@ -8,12 +8,10 @@ export const geocodeGenerator = (address) => {
 
   Geocode.fromAddress(structuredObj).then(
     (response) => {
-      const { lat, lng } = response.results[0].geometry.location;
-      console.log(lat, lng);
-      console.log();
-      const postObj = {};
-      postObj.latitude = toString(response.results[0].geometry.location.lat);
-      postObj.longitude = toString(response.results[0].geometry.location.lng);
+      const postObj = {
+        latitude: response.results[0].geometry.location["lat"],
+        longitude: response.results[0].geometry.location["lng"],
+      };
       axios.post("https://immense-lowlands-41652.herokuapp.com/", postObj);
     },
     (error) => {
