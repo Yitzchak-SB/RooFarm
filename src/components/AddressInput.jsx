@@ -30,6 +30,7 @@ const AddressInput = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     geocodeGenerator(value);
+    setValue("");
   };
 
   return (
