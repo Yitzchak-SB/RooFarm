@@ -4,15 +4,15 @@ import axios from "axios";
 export const geocodeGenerator = (address) => {
   Geocode.setApiKey(process.env.REACT_APP_API_KEY);
 
-  const structuredObj = address.label;
-
-  Geocode.fromAddress(structuredObj).then(
+  Geocode.fromAddress(address).then(
     (response) => {
-      const postObj = {
-        latitude: response.results[0].geometry.location["lat"],
-        longitude: response.results[0].geometry.location["lng"],
-      };
-      axios.post("https://immense-lowlands-41652.herokuapp.com/", postObj);
+      const { lat, lng } = response.results[0].geometry.location;
+      console.log(lat, lng);
+      console.log(response.results[0].geometry.location);
+      axios.post(
+        "http://127.0.0.1:5000/",
+        response.results[0].geometry.location
+      );
     },
     (error) => {
       console.error(error);

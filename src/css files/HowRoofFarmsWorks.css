@@ -8,12 +8,13 @@
 }
 
 #rf-image{
-    background-image: url("../images/rooffarm.jpg");
+    background-image: url("../images/rooffarm.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 #rf-title{
-    margin-left: 35px;
+    margin-left: 40px;
     color: rgb(65, 148, 93);
 }
+
 
