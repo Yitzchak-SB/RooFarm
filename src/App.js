@@ -3,17 +3,36 @@ import "./App.css";
 import HowRoofFarmsWorks from "./components/HowRoofFarmsWorks";
 import RoofFarmsBenefits from "./components/RoofFarmsBenefits";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import GetStartedButton from "./components/GetStartedButton";
 import AddressInput from "./components/AddressInput";
+import { Fab } from "@material-ui/core";
+import FilterVintageTwoToneIcon from "@material-ui/icons/FilterVintageTwoTone";
 
 const App = () => {
+  const handleClick = (event) => {
+    event.preventDefault();
+    console.log("submitted");
+  };
   return (
     <Fragment>
       <CssBaseline />
-      <GetStartedButton />
       <AddressInput />
       <HowRoofFarmsWorks />
       <RoofFarmsBenefits />
+      <Fab
+        style={{
+          margin: 0,
+          top: "auto",
+          right: 20,
+          bottom: 20,
+          left: "auto",
+          position: "fixed",
+        }}
+        color="secondary"
+        aria-label="get-started"
+        onClick={handleClick}
+      >
+        <FilterVintageTwoToneIcon />
+      </Fab>
     </Fragment>
   );
 };
