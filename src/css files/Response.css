@@ -3,6 +3,7 @@
     padding-top: 50px;
     background-color: rgb(233, 233, 233);
     width: 100%;
+    height: 100vh;
 }
 
 #response-h1{
@@ -56,5 +57,9 @@
     }
     #response-h3{
         font-size: 18px;
+    }
+    #response-wrapper{
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
