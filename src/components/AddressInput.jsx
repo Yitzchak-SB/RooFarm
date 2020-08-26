@@ -6,8 +6,8 @@ import IconButton from "@material-ui/core/IconButton";
 import { geocodeGenerator } from "../lib/geocode";
 import FilterVintageTwoToneIcon from "@material-ui/icons/FilterVintageTwoTone";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import "../css files/AddressInput.css";
 import Autocomplete from "./Autocomplete";
+import "../css files/AddressInput.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
