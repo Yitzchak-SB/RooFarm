@@ -7,12 +7,19 @@ export const geocodeGenerator = (address) => {
   const structuredObj = address.label;
 
   Geocode.fromAddress(structuredObj).then(
-    (response) => {
+    async (response) => {
       const postObj = {
         latitude: response.results[0].geometry.location["lat"],
         longitude: response.results[0].geometry.location["lng"],
       };
-      axios.post("https://immense-lowlands-41652.herokuapp.com/", postObj);
+      console.log(postObj);
+      let res = await axios.post(
+        "https://immense-lowlands-41652.herokuapp.com/",
+        postObj
+      );
+      const sqMtr = Math.floor(res.data.square);
+      console.log(sqMtr);
+      return sqMtr;
     },
     (error) => {
       console.error(error);
