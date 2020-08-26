@@ -12,13 +12,8 @@ export const geocodeGenerator = (address) => {
         latitude: response.results[0].geometry.location["lat"],
         longitude: response.results[0].geometry.location["lng"],
       };
-      console.log(postObj);
-      let res = await axios.post(
-        "https://immense-lowlands-41652.herokuapp.com/",
-        postObj
-      );
+      let res = await axios.post("http://127.0.0.1:5000/", postObj);
       const sqMtr = Math.floor(res.data.square);
-      console.log(sqMtr);
       return sqMtr;
     },
     (error) => {

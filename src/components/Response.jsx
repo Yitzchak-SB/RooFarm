@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "@material-ui/core/Button";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import TextField from "@material-ui/core/TextField";
@@ -9,6 +9,10 @@ import "../css files/Response.css";
 
 function Response({ sqMtr }) {
   const [checkedA, setChecked] = useState(true);
+
+  useEffect(() => {
+    console.log(sqMtr);
+  }, [sqMtr]);
 
   const handleChange = (event) => {
     setChecked(event.target.checked);

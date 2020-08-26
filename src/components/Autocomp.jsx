@@ -7,7 +7,6 @@ const Autocomp = ({ submit }) => {
   useEffect(() => {
     (() => {
       submit(value);
-      console.log("value");
     })();
   }, [value, submit]);
 

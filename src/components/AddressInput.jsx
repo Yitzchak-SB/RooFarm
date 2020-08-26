@@ -30,10 +30,8 @@ const AddressInput = ({ setSqMtr }) => {
   const classes = useStyles();
 
   const handleSubmit = async (address) => {
-    console.log(address);
     const sqMtr = geocodeGenerator(address);
     setSqMtr(sqMtr);
-    console.log(sqMtr);
   };
 
   return (
