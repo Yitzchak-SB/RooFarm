@@ -11,7 +11,10 @@ function Response({ sqMtr }) {
   const [checkedA, setChecked] = useState(true);
 
   useEffect(() => {
-    console.log(sqMtr);
+    async function printResponse() {
+      await console.log(sqMtr);
+    }
+    printResponse();
   }, [sqMtr]);
 
   const handleChange = (event) => {
