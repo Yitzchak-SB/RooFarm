@@ -7,7 +7,8 @@ import AddressInput from "./components/AddressInput";
 import { Fab } from "@material-ui/core";
 import FilterVintageTwoToneIcon from "@material-ui/icons/FilterVintageTwoTone";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Response from './components/Response'
+import Response from "./components/Response";
+import Map from "./components/Map";
 
 const App = () => {
   const handleClick = (event) => {
@@ -17,20 +18,21 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path='/'>
+        <Route exact path="/">
           <Fragment>
             <CssBaseline />
             <AddressInput />
             <RoofFarmsBenefits />
             <HowRoofFarmsWorks />
+            <Map />
             <Fab
               style={{
-              margin: 0,
-              top: "auto",
-              right: 20,
-              bottom: 20,
-              left: "auto",
-              position: "fixed",
+                margin: 0,
+                top: "auto",
+                right: 20,
+                bottom: 20,
+                left: "auto",
+                position: "fixed",
               }}
               color="secondary"
               aria-label="get-started"
@@ -40,7 +42,9 @@ const App = () => {
             </Fab>
           </Fragment>
         </Route>
-        <Route path='/submit/'><Response /></Route>
+        <Route path="/submit/">
+          <Response />
+        </Route>
       </Switch>
     </Router>
   );
