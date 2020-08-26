@@ -9,7 +9,7 @@ import FilterVintageTwoToneIcon from "@material-ui/icons/FilterVintageTwoTone";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Response from "./components/Response";
 import Map from "./components/Map";
-import { resContextProvider } from "./context/resContext";
+import ResContextProvider from "./context/resContext";
 
 const App = () => {
   const myRef = useRef();
@@ -21,7 +21,7 @@ const App = () => {
   };
 
   return (
-    <resContextProvider>
+    <ResContextProvider>
       <Router>
         <Switch>
           <Route exact path="/">
@@ -53,7 +53,7 @@ const App = () => {
           </Route>
         </Switch>
       </Router>
-    </resContextProvider>
+    </ResContextProvider>
   );
 };
 

@@ -30,13 +30,14 @@ const useStyles = makeStyles((theme) => ({
 const AddressInput = () => {
   const classes = useStyles();
 
-  let setRes = null;
+  // let setRes = null;
   const context = useContext(resContext);
-  if (context) setRes = context.setRes;
+  // setRes = context && context.setRes;
 
   const handleSubmit = async (address) => {
-    const sqMtr = geocodeGenerator(address);
-    setRes !== null && setRes(sqMtr);
+    const sqMtr = await geocodeGenerator(address);
+    console.log(sqMtr);
+    context.setRes(sqMtr);
   };
 
   return (

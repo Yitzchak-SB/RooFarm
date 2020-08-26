@@ -16,17 +16,16 @@ function Response() {
 
   const handleChange = (event) => {
     setChecked(event.target.checked);
-    console.log(res);
   };
 
   return (
     <div id="response-wrapper">
       {res > 0 ? (
-        <h1 id="response-h1">
+        <h1 id="response-1-h1">
           Your roof has {res} sq. meters of prime garden real estate!
         </h1>
       ) : (
-        <h1 id="response-h1">
+        <h1 id="response-2-h1">
           Thank you for contacting us! We will be in touch shortly!
         </h1>
       )}
