@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Button from "@material-ui/core/Button";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import TextField from "@material-ui/core/TextField";
@@ -6,26 +6,24 @@ import Checkbox from "@material-ui/core/Checkbox";
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import "../css files/Response.css";
+import { resContext } from "../context/resContext";
 
-function Response({ sqMtr }) {
+function Response() {
   const [checkedA, setChecked] = useState(true);
-
-  useEffect(() => {
-    async function printResponse() {
-      await console.log(sqMtr);
-    }
-    printResponse();
-  }, [sqMtr]);
+  let res = null;
+  const context = useContext(resContext);
+  if (context) res = context.res;
 
   const handleChange = (event) => {
     setChecked(event.target.checked);
+    console.log(res);
   };
 
   return (
     <div id="response-wrapper">
-      {sqMtr > 0 ? (
+      {res > 0 ? (
         <h1 id="response-h1">
-          Your roof has {sqMtr} sq. meters of prime garden real estate!
+          Your roof has {res} sq. meters of prime garden real estate!
         </h1>
       ) : (
         <h1 id="response-h1">
