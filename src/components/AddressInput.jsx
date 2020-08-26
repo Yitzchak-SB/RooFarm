@@ -7,6 +7,7 @@ import { geocodeGenerator } from "../lib/geocode";
 import FilterVintageTwoToneIcon from "@material-ui/icons/FilterVintageTwoTone";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "../css files/AddressInput.css";
+import { resContext } from "../context/resContext";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,14 +27,17 @@ const useStyles = makeStyles((theme) => ({
   place: { marginTop: "6px" },
 }));
 
-const AddressInput = ({ setSqMtr }) => {
+const AddressInput = () => {
   const classes = useStyles();
 
+  // let setRes = null;
+  const context = useContext(resContext);
+  // setRes = context && context.setRes;
+
   const handleSubmit = async (address) => {
-    console.log(address);
-    const sqMtr = geocodeGenerator(address);
-    setSqMtr(sqMtr);
+    const sqMtr = await geocodeGenerator(address);
     console.log(sqMtr);
+    context.setRes(sqMtr);
   };
 
   return (
