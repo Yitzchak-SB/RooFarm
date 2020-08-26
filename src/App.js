@@ -1,4 +1,4 @@
-import React, { Fragment, useRef } from "react";
+import React, { Fragment, useRef, useState } from "react";
 import "./App.css";
 import HowRoofFarmsWorks from "./components/HowRoofFarmsWorks";
 import RoofFarmsBenefits from "./components/RoofFarmsBenefits";
@@ -11,6 +11,7 @@ import Response from "./components/Response";
 import Map from "./components/Map";
 
 const App = () => {
+  const [sqMtr, setSqMtr] = useState(0);
   const myRef = useRef();
   const scrollToRef = (ref) => window.scrollTo(0, ref.offsetTop);
 
@@ -25,7 +26,7 @@ const App = () => {
         <Route exact path="/">
           <Fragment>
             <CssBaseline />
-            <AddressInput ref={myRef} />
+            <AddressInput ref={myRef} setSqMtr={setSqMtr} />
             <RoofFarmsBenefits />
             <HowRoofFarmsWorks />
             <Map />
@@ -47,7 +48,7 @@ const App = () => {
           </Fragment>
         </Route>
         <Route path="/submit/">
-          <Response />
+          <Response sqMtr={sqMtr} />
         </Route>
       </Switch>
     </Router>
