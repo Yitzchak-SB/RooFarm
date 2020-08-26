@@ -16,7 +16,9 @@ function Response({ sqMtr }) {
 
   return (
     <div id="response-wrapper">
-      <h1 id="response-h1">Thank you for Contacting Us!</h1>
+      <h1 id="response-h1">
+        Your roof has {sqMtr} sq. meters of prime garden real estate!
+      </h1>
       <h3 id="response-h3">
         Your request has been successfully submitted and we will get in touch
         with you in next 24-hours

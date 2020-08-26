@@ -1,6 +1,8 @@
 import React from "react";
 import { Map as LeafletMap, TileLayer, Marker, Popup } from "react-leaflet";
 import roofs from "../lib/roofs.json";
+import '../css files/Map.css'
+import Grid from '@material-ui/core/Grid';
 
 const Map = () => {
   const addressDict = roofs.AddressString;
@@ -8,10 +10,12 @@ const Map = () => {
   const lng = roofs.AddLng;
   const sqMtr = roofs.sqrd_meters;
   return (
+    <Grid container id='grid-map'>   
+      <Grid item lg={6}>
     <LeafletMap
+      id='map'
       center={[lat[200], lng[200]]}
       zoom={15}
-      //   maxZoom={10}
       attributionControl={true}
       zoomControl={true}
       doubleClickZoom={true}
@@ -35,6 +39,16 @@ const Map = () => {
         }
       })}
     </LeafletMap>
+    </Grid>
+    <Grid item lg={3}>
+        <h2 id='text1'>The map on the left indicates some of the buldings in Paris where it can be installed a roofarm</h2>
+        <h2 id='text2'>According to a survey made by Le Monde on 2019, less than 5% of the buldings implement it</h2>
+    </Grid>
+    <Grid item lg={3}>
+        <h2 id='text3'>More than 2 million people lives in Paris according to the last census and the city counts with over 15 thousands buildings</h2>
+      </Grid>  
+    </Grid>
+
   );
 };
 
