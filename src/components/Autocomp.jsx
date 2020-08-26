@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 
-const Autocomplete = ({ submit }) => {
+const Autocomp = ({ submit }) => {
   const [value, setValue] = useState("");
 
   useEffect(() => {
@@ -40,4 +40,4 @@ const Autocomplete = ({ submit }) => {
   );
 };
 
-export default Autocomplete;
+export default Autocomp;

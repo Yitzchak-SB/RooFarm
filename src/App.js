@@ -10,10 +10,10 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Response from './components/Response'
 
 const App = () => {
-  const handleClick = (event) => {
+  const handleFabClick = (event) => {
     event.preventDefault();
-    console.log("submitted");
   };
+
   return (
     <Router>
       <Switch>
@@ -34,7 +34,7 @@ const App = () => {
               }}
               color="secondary"
               aria-label="get-started"
-              onClick={handleClick}
+              onClick={handleFabClick}
             >
               <FilterVintageTwoToneIcon />
             </Fab>

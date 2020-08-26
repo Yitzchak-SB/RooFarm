@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, {useContext} from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
-import InputBase from "@material-ui/core/InputBase";
+import Autocomp from '../components/Autocomp'
 import IconButton from "@material-ui/core/IconButton";
 import { geocodeGenerator } from "../lib/geocode";
 import FilterVintageTwoToneIcon from "@material-ui/icons/FilterVintageTwoTone";
@@ -10,7 +10,7 @@ import "../css files/AddressInput.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: "2px 4px",
+    padding: "4px 4px",
     display: "flex",
     alignItems: "center",
     textAlign: "center",
@@ -23,6 +23,8 @@ const useStyles = makeStyles((theme) => ({
   iconButton: {
     padding: 10,
   },
+  place: {marginTop: '6px',
+  }
 }));
 
 const AddressInput = () => {
@@ -45,16 +47,15 @@ const AddressInput = () => {
             id="paper-responsive"
             onSubmit={handleSubmit}
           >
-            <Autocomplete submit={handleSubmit} />
+            <Autocomp submit={handleSubmit} />
 
             <IconButton
               type="submit"
               className={classes.iconButton}
               aria-label="submit"
-              color="secondary"
             >
               <Link to="/submit">
-                <FilterVintageTwoToneIcon />
+                <FilterVintageTwoToneIcon className={classes.place} color="secondary"/>
               </Link>
             </IconButton>
           </Paper>
