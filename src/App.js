@@ -11,10 +11,10 @@ import Response from "./components/Response";
 import Map from "./components/Map";
 
 const App = () => {
-  const handleClick = (event) => {
+  const handleFabClick = (event) => {
     event.preventDefault();
-    console.log("submitted");
   };
+
   return (
     <Router>
       <Switch>
@@ -36,7 +36,7 @@ const App = () => {
               }}
               color="secondary"
               aria-label="get-started"
-              onClick={handleClick}
+              onClick={handleFabClick}
             >
               <FilterVintageTwoToneIcon />
             </Fab>
