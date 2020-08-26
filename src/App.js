@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useRef } from "react";
 import "./App.css";
 import HowRoofFarmsWorks from "./components/HowRoofFarmsWorks";
 import RoofFarmsBenefits from "./components/RoofFarmsBenefits";
@@ -11,8 +11,12 @@ import Response from "./components/Response";
 import Map from "./components/Map";
 
 const App = () => {
+  const myRef = useRef();
+  const scrollToRef = (ref) => window.scrollTo(0, ref.offsetTop);
+
   const handleFabClick = (event) => {
     event.preventDefault();
+    scrollToRef(myRef);
   };
 
   return (
@@ -21,7 +25,7 @@ const App = () => {
         <Route exact path="/">
           <Fragment>
             <CssBaseline />
-            <AddressInput />
+            <AddressInput ref={myRef} />
             <RoofFarmsBenefits />
             <HowRoofFarmsWorks />
             <Map />
