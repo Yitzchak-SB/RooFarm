@@ -1,12 +1,11 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
-import Autocomp from '../components/Autocomp'
+import Autocomp from "../components/Autocomp";
 import IconButton from "@material-ui/core/IconButton";
 import { geocodeGenerator } from "../lib/geocode";
 import FilterVintageTwoToneIcon from "@material-ui/icons/FilterVintageTwoTone";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Autocomplete from "./Autocomplete";
 import "../css files/AddressInput.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -24,8 +23,7 @@ const useStyles = makeStyles((theme) => ({
   iconButton: {
     padding: 10,
   },
-  place: {marginTop: '6px',
-  }
+  place: { marginTop: "6px" },
 }));
 
 const AddressInput = () => {
@@ -56,7 +54,10 @@ const AddressInput = () => {
               aria-label="submit"
             >
               <Link to="/submit">
-                <FilterVintageTwoToneIcon className={classes.place} color="secondary"/>
+                <FilterVintageTwoToneIcon
+                  className={classes.place}
+                  color="secondary"
+                />
               </Link>
             </IconButton>
           </Paper>
