@@ -17,9 +17,8 @@ export const geocodeGenerator = async (address) => {
       postObj
     );
     const sqMtr = Math.floor(res.data.square);
-    console.log(sqMtr);
     return sqMtr;
   } catch (error) {
-    console.log(error);
+    throw error;
   }
 };

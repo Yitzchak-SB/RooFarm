@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Autocomp from "../components/Autocomp";
 import IconButton from "@material-ui/core/IconButton";
 import { geocodeGenerator } from "../lib/geocode";
 import FilterVintageTwoToneIcon from "@material-ui/icons/FilterVintageTwoTone";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../css files/AddressInput.css";
 import { resContext } from "../context/resContext";
 
@@ -29,15 +29,18 @@ const useStyles = makeStyles((theme) => ({
 
 const AddressInput = () => {
   const classes = useStyles();
+  const [value, setValue] = useState(null);
 
-  // let setRes = null;
   const context = useContext(resContext);
-  // setRes = context && context.setRes;
 
-  const handleSubmit = async (address) => {
-    const sqMtr = await geocodeGenerator(address);
-    console.log(sqMtr);
-    context.setRes(sqMtr);
+  const handleSubmit = async () => {
+    context.setSentRes(true);
+    try {
+      const sqMtr = await geocodeGenerator(value);
+      context.setRes(sqMtr);
+    } catch (err) {
+      context.setErr(err);
+    }
   };
 
   return (
@@ -52,12 +55,14 @@ const AddressInput = () => {
             id="paper-responsive"
             onSubmit={handleSubmit}
           >
-            <Autocomp submit={handleSubmit} />
+            <Autocomp value={value} setValue={setValue} />
 
             <IconButton
+              onClick={handleSubmit}
               type="submit"
               className={classes.iconButton}
               aria-label="submit"
+              disabled={!value}
             >
               <Link to="/submit">
                 <FilterVintageTwoToneIcon

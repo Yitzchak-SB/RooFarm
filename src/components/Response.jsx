@@ -1,38 +1,50 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import Button from "@material-ui/core/Button";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import TextField from "@material-ui/core/TextField";
-import Checkbox from "@material-ui/core/Checkbox";
-import FormGroup from "@material-ui/core/FormGroup";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
 import "../css files/Response.css";
 import { resContext } from "../context/resContext";
+import { CircularProgress } from "@material-ui/core";
 
 function Response() {
-  const [checkedA, setChecked] = useState(true);
   let res = null;
+  let err = null;
+  let history = useHistory();
   const context = useContext(resContext);
-  if (context) res = context.res;
-
-  const handleChange = (event) => {
-    setChecked(event.target.checked);
-  };
+  if (context) {
+    res = context.res;
+    err = context.err;
+    if (!context.sentRes) history.push("/");
+  }
 
   return (
     <div id="response-wrapper">
-      {res > 0 ? (
+      {err ? (
+        <h1>Oops! Looks like we couldn't process your address</h1>
+      ) : res > 0 ? (
         <h1 id="response-1-h1">
           Your roof has {res} sq. meters of prime garden real estate!
         </h1>
       ) : (
-        <h1 id="response-2-h1">
-          Thank you for contacting us! We will be in touch shortly!
-        </h1>
+        <>
+          <h1 id="response-2-h1">
+            Thank you for caring! We will be in touch shortly!
+          </h1>
+          <CircularProgress />
+        </>
       )}
-      <h3 id="response-h3">
-        Your request has been successfully submitted and we will get in touch
-        with you in next 24-hours
-      </h3>
+      {err ? (
+        <h3>Check that your roof is in our service area, and try again!</h3>
+      ) : res > 0 ? (
+        <h3 id="response-1-h3">
+          Your roof can feed {Math.floor(res / 33)} people per year!
+        </h3>
+      ) : (
+        <h3 id="response-2-h3">
+          Your request has been successfully submitted and we will get in touch
+          with you in next 24-hours
+        </h3>
+      )}
       <Button variant="contained" color="primary" id="response-btn">
         <Link to="/" id="response-link">
           Back to Home Page
@@ -53,9 +65,6 @@ function Response() {
           SUBMIT
         </Button>
       </form>
-      {res > 0 && (
-        <h4>Your roof can feed {Math.floor(res / 33)} people per year!</h4>
-      )}
     </div>
   );
 }

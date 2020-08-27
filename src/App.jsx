@@ -6,7 +6,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import AddressInput from "./components/AddressInput";
 import { Fab } from "@material-ui/core";
 import FilterVintageTwoToneIcon from "@material-ui/icons/FilterVintageTwoTone";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Response from "./components/Response";
 import Map from "./components/Map";
 import ResContextProvider from "./context/resContext";

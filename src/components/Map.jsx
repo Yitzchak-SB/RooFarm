@@ -27,7 +27,7 @@ const Map = () => {
           >
             <TileLayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png" />
 
-            {Object.keys(addressDict).map(function (key, i) {
+            {Object.keys(addressDict).map((key, i) => {
               if (i % 10 === 0) {
                 return (
                   <Marker key={key} position={[lat[key], lng[key]]}>
@@ -38,6 +38,7 @@ const Map = () => {
                   </Marker>
                 );
               }
+              return null;
             })}
           </LeafletMap>
         </Grid>

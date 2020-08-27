@@ -1,15 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 
-const Autocomp = ({ submit }) => {
-  const [value, setValue] = useState("");
-
-  useEffect(() => {
-    (() => {
-      submit(value);
-    })();
-  }, [value, submit]);
-
+const Autocomp = ({ value, setValue }) => {
   return (
     <div style={{ width: "100%" }}>
       <GooglePlacesAutocomplete
