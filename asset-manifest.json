@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/RooFarm/static/css/main.34887d37.chunk.css",
-    "main.js": "/RooFarm/static/js/main.ee0e0f21.chunk.js",
-    "main.js.map": "/RooFarm/static/js/main.ee0e0f21.chunk.js.map",
-    "runtime-main.js": "/RooFarm/static/js/runtime-main.c5da9e82.js",
-    "runtime-main.js.map": "/RooFarm/static/js/runtime-main.c5da9e82.js.map",
-    "static/js/2.15599ceb.chunk.js": "/RooFarm/static/js/2.15599ceb.chunk.js",
-    "static/js/2.15599ceb.chunk.js.map": "/RooFarm/static/js/2.15599ceb.chunk.js.map",
+    "main.js": "/RooFarm/static/js/main.fac574ec.chunk.js",
+    "main.js.map": "/RooFarm/static/js/main.fac574ec.chunk.js.map",
+    "runtime-main.js": "/RooFarm/static/js/runtime-main.c2205214.js",
+    "runtime-main.js.map": "/RooFarm/static/js/runtime-main.c2205214.js.map",
+    "static/js/2.a32ac634.chunk.js": "/RooFarm/static/js/2.a32ac634.chunk.js",
+    "static/js/2.a32ac634.chunk.js.map": "/RooFarm/static/js/2.a32ac634.chunk.js.map",
     "index.html": "/RooFarm/index.html",
-    "precache-manifest.5133c67552c6705270aa19dd73cd21b3.js": "/RooFarm/precache-manifest.5133c67552c6705270aa19dd73cd21b3.js",
+    "precache-manifest.9173cbe59bb4c01c67f3ec6062dfae73.js": "/RooFarm/precache-manifest.9173cbe59bb4c01c67f3ec6062dfae73.js",
     "service-worker.js": "/RooFarm/service-worker.js",
     "static/css/main.34887d37.chunk.css.map": "/RooFarm/static/css/main.34887d37.chunk.css.map",
-    "static/js/2.15599ceb.chunk.js.LICENSE.txt": "/RooFarm/static/js/2.15599ceb.chunk.js.LICENSE.txt",
+    "static/js/2.a32ac634.chunk.js.LICENSE.txt": "/RooFarm/static/js/2.a32ac634.chunk.js.LICENSE.txt",
     "static/media/App.css": "/RooFarm/static/media/Quicksand-VariableFont_wght.f9baef8a.ttf",
     "static/media/AddressInput.css": "/RooFarm/static/media/cosecha.034f80d1.jpeg",
     "static/media/HowRoofFarmsWorks.css": "/RooFarm/static/media/rooffarm.02a3c7ab.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c5da9e82.js",
-    "static/js/2.15599ceb.chunk.js",
+    "static/js/runtime-main.c2205214.js",
+    "static/js/2.a32ac634.chunk.js",
     "static/css/main.34887d37.chunk.css",
-    "static/js/main.ee0e0f21.chunk.js"
+    "static/js/main.fac574ec.chunk.js"
   ]
 }
