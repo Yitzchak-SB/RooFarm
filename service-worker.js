@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/RooFarm/precache-manifest.21bc44ff2833fa285345a3a8be8d1619.js"
+  "/RooFarm/precache-manifest.f79d05526b69835e1cfc059fa69e597c.js"
 );
 
 self.addEventListener('message', (event) => {
