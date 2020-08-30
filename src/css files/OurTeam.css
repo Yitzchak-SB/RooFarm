@@ -1,0 +1,34 @@
+.our-team {
+  padding-bottom: 50px;
+  background-color: #eeeeea;
+}
+
+.team-header {
+  text-align: center;
+  padding: 60px 0 0 0;
+}
+
+.team-second {
+  text-align: center;
+  margin: 50px 40px;
+}
+
+.team-div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link-name {
+  font-size: 1rem;
+}
+
+.linked-link {
+  font-size: 1.5rem;
+  color: #0077b5;
+}

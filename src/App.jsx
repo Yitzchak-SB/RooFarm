@@ -1,4 +1,4 @@
-import React, { Fragment, useRef, useState } from "react";
+import React, { Fragment, useRef } from "react";
 import "./App.css";
 import HowRoofFarmsWorks from "./components/HowRoofFarmsWorks";
 import RoofFarmsBenefits from "./components/RoofFarmsBenefits";
@@ -6,10 +6,11 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import AddressInput from "./components/AddressInput";
 import { Fab } from "@material-ui/core";
 import FilterVintageTwoToneIcon from "@material-ui/icons/FilterVintageTwoTone";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Response from "./components/Response";
 import Map from "./components/Map";
 import ResContextProvider from "./context/resContext";
+import OurTeam from "./components/OurTeam";
 
 const App = () => {
   const myRef = useRef();
@@ -31,6 +32,7 @@ const App = () => {
               <RoofFarmsBenefits />
               <HowRoofFarmsWorks />
               <Map />
+              <OurTeam />
               <Fab
                 style={{
                   margin: 0,

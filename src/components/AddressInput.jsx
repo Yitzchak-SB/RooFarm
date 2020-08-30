@@ -35,6 +35,7 @@ const AddressInput = () => {
 
   const handleSubmit = async () => {
     context.setSentRes(true);
+    console.log("sent-res");
     try {
       const sqMtr = await geocodeGenerator(value);
       context.setRes(sqMtr);
