@@ -1,25 +1,32 @@
 {
   "files": {
-    "main.css": "/RooFarm/static/css/main.34887d37.chunk.css",
-    "main.js": "/RooFarm/static/js/main.ad0faaed.chunk.js",
-    "main.js.map": "/RooFarm/static/js/main.ad0faaed.chunk.js.map",
+    "main.css": "/RooFarm/static/css/main.bd580e8c.chunk.css",
+    "main.js": "/RooFarm/static/js/main.58667258.chunk.js",
+    "main.js.map": "/RooFarm/static/js/main.58667258.chunk.js.map",
     "runtime-main.js": "/RooFarm/static/js/runtime-main.c2205214.js",
     "runtime-main.js.map": "/RooFarm/static/js/runtime-main.c2205214.js.map",
-    "static/js/2.9d38b4f5.chunk.js": "/RooFarm/static/js/2.9d38b4f5.chunk.js",
-    "static/js/2.9d38b4f5.chunk.js.map": "/RooFarm/static/js/2.9d38b4f5.chunk.js.map",
+    "static/js/2.9cc44ccb.chunk.js": "/RooFarm/static/js/2.9cc44ccb.chunk.js",
+    "static/js/2.9cc44ccb.chunk.js.map": "/RooFarm/static/js/2.9cc44ccb.chunk.js.map",
     "index.html": "/RooFarm/index.html",
-    "precache-manifest.850fef0906c3abfca3e4292c86d174c4.js": "/RooFarm/precache-manifest.850fef0906c3abfca3e4292c86d174c4.js",
+    "precache-manifest.6968818f8257da082b43a7a9046c7fc1.js": "/RooFarm/precache-manifest.6968818f8257da082b43a7a9046c7fc1.js",
     "service-worker.js": "/RooFarm/service-worker.js",
-    "static/css/main.34887d37.chunk.css.map": "/RooFarm/static/css/main.34887d37.chunk.css.map",
-    "static/js/2.9d38b4f5.chunk.js.LICENSE.txt": "/RooFarm/static/js/2.9d38b4f5.chunk.js.LICENSE.txt",
+    "static/css/main.bd580e8c.chunk.css.map": "/RooFarm/static/css/main.bd580e8c.chunk.css.map",
+    "static/js/2.9cc44ccb.chunk.js.LICENSE.txt": "/RooFarm/static/js/2.9cc44ccb.chunk.js.LICENSE.txt",
+    "static/media/Dovid_Baars.png": "/RooFarm/static/media/Dovid_Baars.1fbdbd1e.png",
+    "static/media/Nicolás_Videla_Guahnon.png": "/RooFarm/static/media/Nicolás_Videla_Guahnon.923fedcb.png",
     "static/media/App.css": "/RooFarm/static/media/Quicksand-VariableFont_wght.f9baef8a.ttf",
+    "static/media/Ron_Zehavi.png": "/RooFarm/static/media/Ron_Zehavi.b331ada6.png",
+    "static/media/Sebastian_Kleiner.png": "/RooFarm/static/media/Sebastian_Kleiner.dc60650e.png",
+    "static/media/Serah_Tapia.png": "/RooFarm/static/media/Serah_Tapia.975e5d4d.png",
+    "static/media/Solomiia_Ivychuk.png": "/RooFarm/static/media/Solomiia_Ivychuk.4c4bdc97.png",
+    "static/media/Yitzchak_Siegel-Bareket.png": "/RooFarm/static/media/Yitzchak_Siegel-Bareket.1c360073.png",
     "static/media/AddressInput.css": "/RooFarm/static/media/cosecha.034f80d1.jpeg",
     "static/media/HowRoofFarmsWorks.css": "/RooFarm/static/media/rooffarm.02a3c7ab.jpeg"
   },
   "entrypoints": [
     "static/js/runtime-main.c2205214.js",
-    "static/js/2.9d38b4f5.chunk.js",
-    "static/css/main.34887d37.chunk.css",
-    "static/js/main.ad0faaed.chunk.js"
+    "static/js/2.9cc44ccb.chunk.js",
+    "static/css/main.bd580e8c.chunk.css",
+    "static/js/main.58667258.chunk.js"
   ]
 }
