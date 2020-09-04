@@ -12,7 +12,7 @@ const Map = () => {
   return (
     <div>
     <Grid container id='grid-map'>   
-      <Grid item lg={6} >
+      <Grid item lg={6} id='mapaa'>
           <LeafletMap
             id='map'
             center={[lat[200], lng[200]]}

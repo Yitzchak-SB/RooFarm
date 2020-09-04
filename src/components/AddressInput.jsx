@@ -7,6 +7,7 @@ import { geocodeGenerator } from "../lib/geocode";
 import FilterVintageTwoToneIcon from "@material-ui/icons/FilterVintageTwoTone";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "../css files/AddressInput.css";
+import Zoom from 'react-reveal/Zoom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,7 +38,9 @@ const AddressInput = () => {
   return (
     <div id="div-wrapper">
       <div id="div-subwrapper">
-        <h1 id="address-title">roofarm</h1>
+        <Zoom>
+          <h1 id="address-title">roofarm</h1>
+        </Zoom>
         <p id="address-subtitle">GROW YOUR OWN FOOD</p>
         <div id="paper-wrapper">
           <Paper

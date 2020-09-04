@@ -6,6 +6,7 @@ import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
 import '../css files/RoofFarmsBenefits.css'
 import { Grid } from '@material-ui/core';
 import { makeStyles } from "@material-ui/core/styles";
+import Zoom  from 'react-reveal/Zoom';
 
 const useStyles = makeStyles({
     icons: {marginTop: '50px', 
@@ -24,20 +25,36 @@ function RoofFarmsBenefits(){
             <h1 id="benefits-title">WHAT ARE THE ROOF FARM BENEFITS</h1>
             <Grid container>
                 <Grid item lg={3}>
+                <Zoom >
+                    <div>
                     <EmojiObjectsIcon className={classes.icons} id='first-icon'/>
                     <p className={classes.texts}>Enhance the urban landscape (and human well-being). Rooftop farms literally make cities greener. Studies have found that exposure to nature provides an array of psychological benefits.</p>
+                    </div>
+                    </Zoom>
                 </Grid>
                 <Grid item lg={3}>
+                <Zoom  delay='250'>
+                    <div>
                     <EcoIcon className={classes.icons} id='second-icon'/>
                     <p className={classes.texts}>Make cities more eco-friendly. Bare roofs in cities absorb and then radiate heat. This increases energy usage and contributes to the poor air quality that often plagues big cities. </p>
+                    </div>
+                    </Zoom>
                 </Grid>
                 <Grid item lg={3}>
+                    <Zoom  delay='500'>
+                    <div>
                     <LocalShippingIcon className={classes.icons} id='third-icon'/>
                     <p className={classes.texts}>Reduce of carbon emissions and so environmental impact of food transportation. Allows for produce to be picked at just the right time</p>
+                    </div>
+                    </Zoom>
                 </Grid>
                 <Grid item lg={3}>
+                    <Zoom    delay='750'>
+                    <div>
                     <AssignmentTurnedInIcon className={classes.icons} id='fourth-icon'/>
                     <p className={classes.texts}>Increase the availability of real, healthy food. A completely organic form of farming. This means it often has no pesticides or insecticides.</p>
+                    </div>
+                    </Zoom>
                 </Grid>
             </Grid>
         </div>
