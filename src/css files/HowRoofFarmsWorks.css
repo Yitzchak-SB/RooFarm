@@ -17,4 +17,10 @@
     color: rgb(65, 148, 93);
 }
 
+@media only screen and (max-width: 600px) {
+    #rf-title{
+        font-size: 22px;
+    }
+}
+
 
