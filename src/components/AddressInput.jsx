@@ -27,12 +27,14 @@ const useStyles = makeStyles((theme) => ({
   place: { marginTop: "6px" },
 }));
 
-const AddressInput = () => {
+const AddressInput = ({ setSqMtr }) => {
   const classes = useStyles();
 
   const handleSubmit = async (address) => {
     console.log(address);
-    geocodeGenerator(address);
+    const sqMtr = geocodeGenerator(address);
+    setSqMtr(sqMtr);
+    console.log(sqMtr);
   };
 
   return (
